@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easy Beef BR - Açougue Premium com carnes selecionadas de alta qualidade">
+    <title>Easy Beef BR - Açougue Premium</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip Link para Acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo Easy Beef BR" width="80" height="80">
+                <span class="logo-text">Easy Beef BR</span>
+            </div>
+            
+            <ul class="nav-menu" role="menu">
+                <li>
+                    <a href="#inicio" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#produtos" class="nav-link">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <span>Produtos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#sobre" class="nav-link">
+                        <i class="fas fa-store"></i>
+                        <span>Sobre</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contato" class="nav-link">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Contato</span>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="menu-mobile" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <h1>Carnes Premium<br>para Sua Mesa</h1>
+                <p>Sabor e qualidade em cada corte selecionado</p>
+                <a href="#produtos" class="cta-button">
+                    <i class="fas fa-drumstick-bite"></i>
+                    Conheça Nossos Cortes
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção de Produtos -->
+        <section id="produtos" class="produtos-section">
+            <h2>Nossos Produtos</h2>
+            
+            <div class="categorias-toggle">
+                <button class="categoria-btn active" data-categoria="premium">
+                    Cortes Premium
+                </button>
+                <button class="categoria-btn" data-categoria="tradicional">
+                    Cortes Tradicionais
+                </button>
+            </div>
+
+            <div class="produtos-grid" id="produtos-container">
+                <!-- Produtos serão inseridos via JavaScript -->
+            </div>
+
+            <!-- Modal de Mensagem Personalizada -->
+            <div id="mensagemModal" class="modal">
+                <div class="modal-content">
+                    <span class="fechar-modal">&times;</span>
+                    <h3>Mensagem para Easy Beef</h3>
+                    <textarea id="mensagemPersonalizada" 
+                              placeholder="Digite uma mensagem adicional para seu pedido..."
+                              rows="4"></textarea>
+                    <button onclick="confirmarMensagem()" class="btn-confirmar">
+                        <i class="fas fa-check"></i>
+                        Confirmar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="sobre-section">
+            <div class="sobre-content">
+                <h2>Sobre a Easy Beef BR</h2>
+                <p>Especialistas em carnes premium, oferecendo os melhores cortes para sua mesa.</p>
+                <div class="sobre-grid">
+                    <div class="sobre-card">
+                        <i class="fas fa-award"></i>
+                        <h3>Qualidade Premium</h3>
+                        <p>Seleção rigorosa das melhores carnes</p>
+                    </div>
+                    <div class="sobre-card">
+                        <i class="fas fa-truck"></i>
+                        <h3>Entrega Rápida</h3>
+                        <p>Entregamos em toda a região</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="contato-section">
+            <h2>Entre em Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-text">
+                            <h3>Endereço</h3>
+                            <a href="https://maps.google.com/?q=Rua+Example+123+Cidade" 
+                               target="_blank" 
+                               class="endereco-link">
+                                Rua Example, 123 - Cidade
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-text">
+                            <h3>Telefone</h3>
+                            <p>(91) 98565-9626</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="info-text">
+                            <h3>Horário de Funcionamento</h3>
+                            <p>Segunda a Sábado: 8h às 18h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Easy Beef BR - Todos os direitos reservados</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <!-- Modal do Carrinho -->
+    <div id="carrinhoModal" class="modal">
+        <div class="modal-content carrinho-content">
+            <span class="fechar-modal">&times;</span>
+            <h3>Seu Pedido</h3>
+            <div id="carrinho-itens"></div>
+            <div class="carrinho-total"></div>
+            <div class="carrinho-acoes">
+                <button onclick="limparCarrinho()" class="btn-limpar">
+                    <i class="fas fa-trash"></i>
+                    Limpar
+                </button>
+                <button onclick="enviarPedidoWhatsApp()" class="btn-enviar">
+                    <i class="fab fa-whatsapp"></i>
+                    Enviar Pedido
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Adicionar antes do fechamento do body -->
+    <a href="#" class="whatsapp-button" onclick="enviarPedidoWhatsApp()" aria-label="Enviar pedido pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
